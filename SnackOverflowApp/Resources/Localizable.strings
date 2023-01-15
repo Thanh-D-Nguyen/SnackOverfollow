@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  SnackOverflowApp
+
+  Created by タイン・グエン on 2023/01/09.
+  
+*/
+"Hand-pickle high quality snacks." = "Hand-pickle high quality snacks.";
+"Shop global. Mind-blownly affordable." = "Shop global. Mind-blownly affordable.";
+"Deliver on the promise of time." = "Deliver on the promise of time.";
+"By clicking \"Create account\", I agree to SnackOverflow’s TOS and Privacy Policy." = "By clicking \"Create account\", I agree to SnackOverflow’s TOS and Privacy Policy.";
+
+"Home" = "Home";
+"Market" = "Market";
+"Create" = "Create";
+"Wishlist" = "Wishlist";
+"Account" = "Account";

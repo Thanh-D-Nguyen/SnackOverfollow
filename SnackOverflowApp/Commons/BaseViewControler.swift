@@ -30,7 +30,6 @@ class BaseVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.view.backgroundColor = .white
         if self is HomeViewController {
             Constants.currentBarStyle = .lightContent
         } else {

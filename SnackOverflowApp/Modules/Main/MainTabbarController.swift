@@ -18,9 +18,4 @@ class MainTabbarController: UITabBarController {
         self.view.backgroundColor = .white
         self.tabBar.barTintColor = .white
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.setNeedsStatusBarAppearanceUpdate()
-    }
 }

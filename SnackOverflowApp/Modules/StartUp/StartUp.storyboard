@@ -26,7 +26,7 @@
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="3pi-N7-nbV"/>
-                        <color key="backgroundColor" name="AccentColor"/>
+                        <color key="backgroundColor" name="peachColor"/>
                         <constraints>
                             <constraint firstItem="svp-0N-x0J" firstAttribute="centerX" secondItem="Z2g-4m-atm" secondAttribute="centerX" id="G8A-cp-smB"/>
                             <constraint firstItem="wbu-fs-pG6" firstAttribute="centerX" secondItem="Z2g-4m-atm" secondAttribute="centerX" id="i1w-fN-vIL"/>
@@ -42,8 +42,8 @@
     </scenes>
     <resources>
         <image name="App logo" width="143" height="125"/>
-        <namedColor name="AccentColor">
-            <color red="0.81568627450980391" green="0.40392156862745099" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="peachColor">
+            <color red="0.93333333333333335" green="0.40392156862745099" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

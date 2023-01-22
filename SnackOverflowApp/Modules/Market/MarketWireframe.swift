@@ -31,8 +31,6 @@ final class MarketWireframe: BaseWireframe<MarketViewController> {
 
 extension MarketWireframe: MarketWireframeInterface {
     func openMarketSearch() {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .white
-        self.navigationController?.pushViewController(vc, animated: true)
+        self.navigationController?.pushWireframe(MarketSearchWireframe())
     }
 }

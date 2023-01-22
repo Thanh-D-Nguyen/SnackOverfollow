@@ -96,6 +96,11 @@
 		92440B272973E62B002D23AC /* SnackBoxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440B252973E62B002D23AC /* SnackBoxesCell.swift */; };
 		92440B282973E62B002D23AC /* SnackBoxesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92440B262973E62B002D23AC /* SnackBoxesCell.xib */; };
 		92440B2A297D0FCD002D23AC /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440B29297D0FCD002D23AC /* CollectionView.swift */; };
+		92440B31297D4042002D23AC /* MarketSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92440B2C297D4042002D23AC /* MarketSearch.storyboard */; };
+		92440B33297D4042002D23AC /* MarketSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440B2E297D4042002D23AC /* MarketSearchPresenter.swift */; };
+		92440B34297D4042002D23AC /* MarketSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440B2F297D4042002D23AC /* MarketSearchViewController.swift */; };
+		92440B35297D4042002D23AC /* MarketSearchWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440B30297D4042002D23AC /* MarketSearchWireframe.swift */; };
+		92440B37297D40FA002D23AC /* MarketSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440B36297D40FA002D23AC /* MarketSearchInteractor.swift */; };
 		92686417296BF88000E36FE8 /* WelcomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92686416296BF88000E36FE8 /* WelcomeEntity.swift */; };
 		92686419296BF8C500E36FE8 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92686418296BF8C500E36FE8 /* Enums.swift */; };
 		92686428296BFE5F00E36FE8 /* SlideShowWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92686427296BFE5F00E36FE8 /* SlideShowWireframe.swift */; };
@@ -234,6 +239,11 @@
 		92440B252973E62B002D23AC /* SnackBoxesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBoxesCell.swift; sourceTree = "<group>"; };
 		92440B262973E62B002D23AC /* SnackBoxesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnackBoxesCell.xib; sourceTree = "<group>"; };
 		92440B29297D0FCD002D23AC /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		92440B2C297D4042002D23AC /* MarketSearch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MarketSearch.storyboard; sourceTree = "<group>"; };
+		92440B2E297D4042002D23AC /* MarketSearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSearchPresenter.swift; sourceTree = "<group>"; };
+		92440B2F297D4042002D23AC /* MarketSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSearchViewController.swift; sourceTree = "<group>"; };
+		92440B30297D4042002D23AC /* MarketSearchWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSearchWireframe.swift; sourceTree = "<group>"; };
+		92440B36297D40FA002D23AC /* MarketSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSearchInteractor.swift; sourceTree = "<group>"; };
 		92686413296BF4CE00E36FE8 /* SVProgressHUD.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SVProgressHUD.xcframework; sourceTree = "<group>"; };
 		92686416296BF88000E36FE8 /* WelcomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeEntity.swift; sourceTree = "<group>"; };
 		92686418296BF8C500E36FE8 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -342,6 +352,7 @@
 				92440AC9297277A7002D23AC /* Account */,
 				92440AC8297277A2002D23AC /* Create */,
 				92440AC72972779C002D23AC /* Market */,
+				92440B2B297D4028002D23AC /* MarketSearch */,
 				92440AC629727796002D23AC /* Home */,
 				92440AB929727639002D23AC /* Main */,
 				92440AB629726381002D23AC /* MailLogin */,
@@ -418,6 +429,7 @@
 				92440AED297279F5002D23AC /* CreateInteractor.swift */,
 				92440AEF29727A5B002D23AC /* AccountInteractor.swift */,
 				92440B0529727BAF002D23AC /* WishlistInteractor.swift */,
+				92440B36297D40FA002D23AC /* MarketSearchInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -527,6 +539,17 @@
 				92440B262973E62B002D23AC /* SnackBoxesCell.xib */,
 			);
 			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		92440B2B297D4028002D23AC /* MarketSearch */ = {
+			isa = PBXGroup;
+			children = (
+				92440B2C297D4042002D23AC /* MarketSearch.storyboard */,
+				92440B2E297D4042002D23AC /* MarketSearchPresenter.swift */,
+				92440B2F297D4042002D23AC /* MarketSearchViewController.swift */,
+				92440B30297D4042002D23AC /* MarketSearchWireframe.swift */,
+			);
+			path = MarketSearch;
 			sourceTree = "<group>";
 		};
 		92686412296BF4BF00E36FE8 /* Vendors */ = {
@@ -784,6 +807,7 @@
 				92686433296C014A00E36FE8 /* Localizable.strings in Resources */,
 				92440B0029727B33002D23AC /* Wishlist.storyboard in Resources */,
 				92720684296A9E3C0058876B /* LaunchScreen.storyboard in Resources */,
+				92440B31297D4042002D23AC /* MarketSearch.storyboard in Resources */,
 				92440AE829727999002D23AC /* Create.storyboard in Resources */,
 				9268642A296BFEAD00E36FE8 /* SlideShow.storyboard in Resources */,
 				92298595296BE4FB00598511 /* StartUp.storyboard in Resources */,
@@ -872,6 +896,7 @@
 				9268643C296C17AD00E36FE8 /* SlideItemViewController.swift in Sources */,
 				92163CC9296AB7160014AE02 /* AppService.swift in Sources */,
 				92440AD3297277DC002D23AC /* HomeViewController.swift in Sources */,
+				92440B33297D4042002D23AC /* MarketSearchPresenter.swift in Sources */,
 				92440AF929727A8E002D23AC /* AccountViewController.swift in Sources */,
 				92440AE229727921002D23AC /* MarketInteractor.swift in Sources */,
 				92440B272973E62B002D23AC /* SnackBoxesCell.swift in Sources */,
@@ -883,9 +908,11 @@
 				92440B0829727C61002D23AC /* MainTabbarController.swift in Sources */,
 				92440AC52972766A002D23AC /* MainInteractor.swift in Sources */,
 				92440B0229727B33002D23AC /* WishlistPresenter.swift in Sources */,
+				92440B35297D4042002D23AC /* MarketSearchWireframe.swift in Sources */,
 				922985A7296BEA9700598511 /* ViewInterface.swift in Sources */,
 				92440AD2297277DC002D23AC /* HomePresenter.swift in Sources */,
 				92163CC2296AB65A0014AE02 /* MainScheduleSubscribler.swift in Sources */,
+				92440B34297D4042002D23AC /* MarketSearchViewController.swift in Sources */,
 				92440B0629727BAF002D23AC /* WishlistInteractor.swift in Sources */,
 				92298597296BE4FB00598511 /* StartUpPresenter.swift in Sources */,
 				9229859E296BE96300598511 /* Font.swift in Sources */,
@@ -911,6 +938,7 @@
 				92440AD4297277DC002D23AC /* HomeWireframe.swift in Sources */,
 				92440B1F2973DE72002D23AC /* AdvanceCardCell.swift in Sources */,
 				9268644829703E4E00E36FE8 /* BaseNavigationController.swift in Sources */,
+				92440B37297D40FA002D23AC /* MarketSearchInteractor.swift in Sources */,
 				9229859B296BE4FB00598511 /* StartUpWireframe.swift in Sources */,
 				922985A2296BE9D700598511 /* Storyboard.swift in Sources */,
 				92440ADE297278DA002D23AC /* MarketPresenter.swift in Sources */,

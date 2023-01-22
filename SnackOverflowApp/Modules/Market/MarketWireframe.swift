@@ -9,6 +9,8 @@
 import UIKit
 
 protocol MarketWireframeInterface: AnyObject {
+    
+    func openMarketSearch()
 }
 
 final class MarketWireframe: BaseWireframe<MarketViewController> {
@@ -28,4 +30,9 @@ final class MarketWireframe: BaseWireframe<MarketViewController> {
 }
 
 extension MarketWireframe: MarketWireframeInterface {
+    func openMarketSearch() {
+        let vc = UIViewController()
+        vc.view.backgroundColor = .white
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

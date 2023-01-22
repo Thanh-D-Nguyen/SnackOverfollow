@@ -23,23 +23,23 @@ final class MarketViewController: BaseViewController {
     }
     
     func setupUI() {
+        marketTableView.registerNib(cellClass: HomeSubSectionCell.self)
+        searchTextField.delegate = self
         searchTextField.textColor = UIColor(named: "teflonColor")
         searchTextField.attributedPlaceholder = presenter.searchPlaceHolderAttributedText
         searchTextField.leftView?.tintColor = UIColor(named: "clooneyColor")
         searchTextField.rightView?.tintColor = UIColor(named: "clooneyColor")
         searchTextField.backgroundColor = UIColor(named: "whiteyColor")
-        
-        let tapGuesture = UITapGestureRecognizer()
-        tapGuesture.addTarget(self, action: #selector(self.dismissKeyboard))
-        self.view.addGestureRecognizer(tapGuesture)
     }
     
     func subscribe() {
         
     }
-    
-    @objc
-    private func dismissKeyboard(_ gesture: UITapGestureRecognizer) {
-        view.endEditing(true)
+}
+
+extension MarketViewController: UITextFieldDelegate {
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        presenter.openMarketSearch()
+        return false
     }
 }

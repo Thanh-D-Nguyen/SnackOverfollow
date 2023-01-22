@@ -25,7 +25,7 @@ class BaseVC: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNeedsUpdateOfScreenEdgesDeferringSystemGestures()
+//        setNeedsUpdateOfScreenEdgesDeferringSystemGestures()
     }
     
     override func viewWillAppear(_ animated: Bool) {

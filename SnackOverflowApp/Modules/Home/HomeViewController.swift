@@ -52,7 +52,6 @@ extension HomeViewController: UITableViewDataSource {
                 return cell
             } else {
                 let cell: HomeCarouselCell = tableView.dequeueResuableCell(forIndexPath: indexPath)
-//                cell.updateContent(sectionType, data: presenter.sectionData(sectionType))
                 return cell
             }
         }

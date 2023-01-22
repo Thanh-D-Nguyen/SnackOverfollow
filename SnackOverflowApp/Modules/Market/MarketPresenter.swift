@@ -18,6 +18,8 @@ enum MarketSectionType: Int {
 
 protocol MarketPresenterInterface: AnyObject {
     var searchPlaceHolderAttributedText: NSAttributedString { get }
+    
+    func openMarketSearch()
 }
 
 final class MarketPresenter {
@@ -40,4 +42,7 @@ final class MarketPresenter {
     }
 }
 extension MarketPresenter: MarketPresenterInterface {
+    func openMarketSearch() {
+        wireframe.openMarketSearch()
+    }
 }

@@ -44,10 +44,11 @@ extension MainPresenter: MainPresenterInterface {
         let tabbarController = MainTabbarController()
         let home = HomeWireframe()
         let market = MarketWireframe()
+        let marketNav = BaseNavigationController(rootViewController: market.viewController)
         let create = CreateWireframe()
         let account = AccountWireframe()
         let wishlist = WishlistWireframe()
-        let viewControllers = [home.viewController, market.viewController, create.viewController, account.viewController, wishlist.viewController]
+        let viewControllers = [home.viewController, marketNav, create.viewController, account.viewController, wishlist.viewController]
         tabbarController.viewControllers = viewControllers
         return tabbarController
     }

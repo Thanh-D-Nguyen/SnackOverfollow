@@ -95,6 +95,7 @@
 		92440B242973E521002D23AC /* SimpleCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92440B222973E521002D23AC /* SimpleCardCell.xib */; };
 		92440B272973E62B002D23AC /* SnackBoxesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440B252973E62B002D23AC /* SnackBoxesCell.swift */; };
 		92440B282973E62B002D23AC /* SnackBoxesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 92440B262973E62B002D23AC /* SnackBoxesCell.xib */; };
+		92440B2A297D0FCD002D23AC /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440B29297D0FCD002D23AC /* CollectionView.swift */; };
 		92686417296BF88000E36FE8 /* WelcomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92686416296BF88000E36FE8 /* WelcomeEntity.swift */; };
 		92686419296BF8C500E36FE8 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92686418296BF8C500E36FE8 /* Enums.swift */; };
 		92686428296BFE5F00E36FE8 /* SlideShowWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92686427296BFE5F00E36FE8 /* SlideShowWireframe.swift */; };
@@ -232,6 +233,7 @@
 		92440B222973E521002D23AC /* SimpleCardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleCardCell.xib; sourceTree = "<group>"; };
 		92440B252973E62B002D23AC /* SnackBoxesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBoxesCell.swift; sourceTree = "<group>"; };
 		92440B262973E62B002D23AC /* SnackBoxesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SnackBoxesCell.xib; sourceTree = "<group>"; };
+		92440B29297D0FCD002D23AC /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		92686413296BF4CE00E36FE8 /* SVProgressHUD.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SVProgressHUD.xcframework; sourceTree = "<group>"; };
 		92686416296BF88000E36FE8 /* WelcomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeEntity.swift; sourceTree = "<group>"; };
 		92686418296BF8C500E36FE8 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 				922985A1296BE9D700598511 /* Storyboard.swift */,
 				92686439296C06B900E36FE8 /* Color.swift */,
 				92440B1B2973DC04002D23AC /* View.swift */,
+				92440B29297D0FCD002D23AC /* CollectionView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -895,6 +898,7 @@
 				92440AB829726424002D23AC /* MailLoginInteractor.swift in Sources */,
 				9268642C296BFED300E36FE8 /* SlideShowViewController.swift in Sources */,
 				92440AA429705A9A002D23AC /* SocialSignInInteractor.swift in Sources */,
+				92440B2A297D0FCD002D23AC /* CollectionView.swift in Sources */,
 				92440AEA29727999002D23AC /* CreatePresenter.swift in Sources */,
 				92440ADF297278DA002D23AC /* MarketViewController.swift in Sources */,
 				92298598296BE4FB00598511 /* StartUpViewController.swift in Sources */,

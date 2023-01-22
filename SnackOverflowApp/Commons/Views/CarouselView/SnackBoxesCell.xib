@@ -30,10 +30,10 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="GTY-IA-lo9">
                                                 <rect key="frame" x="0.0" y="0.0" width="166" height="81"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle.png" translatesAutoresizingMaskIntoConstraints="NO" id="8aj-CK-H5W">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TeaBreak2" translatesAutoresizingMaskIntoConstraints="NO" id="8aj-CK-H5W">
                                                         <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle.png" translatesAutoresizingMaskIntoConstraints="NO" id="LyR-3k-f9w">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrangeJuice" translatesAutoresizingMaskIntoConstraints="NO" id="LyR-3k-f9w">
                                                         <rect key="frame" x="85" y="0.0" width="81" height="81"/>
                                                     </imageView>
                                                 </subviews>
@@ -41,10 +41,10 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="bkm-BZ-b2b">
                                                 <rect key="frame" x="0.0" y="85" width="166" height="81"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle.png" translatesAutoresizingMaskIntoConstraints="NO" id="00O-Tz-c8r">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrangeJuice" translatesAutoresizingMaskIntoConstraints="NO" id="00O-Tz-c8r">
                                                         <rect key="frame" x="0.0" y="0.0" width="81" height="81"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bicycle.png" translatesAutoresizingMaskIntoConstraints="NO" id="IbR-Hq-A9n">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="teaBreak" translatesAutoresizingMaskIntoConstraints="NO" id="IbR-Hq-A9n">
                                                         <rect key="frame" x="85" y="0.0" width="81" height="81"/>
                                                     </imageView>
                                                 </subviews>
@@ -149,7 +149,9 @@
     <resources>
         <image name="IconStar" width="12" height="12"/>
         <image name="IconTime" width="12" height="12"/>
-        <image name="bicycle.png" width="2208" height="2208"/>
+        <image name="OrangeJuice" width="2670" height="4000"/>
+        <image name="TeaBreak2" width="400" height="267"/>
+        <image name="teaBreak" width="960" height="640"/>
         <namedColor name="gandalfColor">
             <color red="0.59215686274509804" green="0.56862745098039214" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

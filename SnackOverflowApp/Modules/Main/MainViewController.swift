@@ -24,6 +24,7 @@ final class MainViewController: BaseViewController {
     }
     
     func setupUI() {
+        tabBarContainerView.backgroundColor = .white
     }
     
     func subscribe() {
@@ -35,6 +36,8 @@ final class MainViewController: BaseViewController {
     
     private func updateTabbarController(_ controller: MainTabbarController) {
         tabBarContainerView.addSubview(controller.view)
+        controller.didMove(toParent: self)
+        self.addChild(controller)
         controller.view.translatesAutoresizingMaskIntoConstraints = false
         tabBarContainerView.topAnchor.constraint(equalTo: controller.view.topAnchor).isActive = true
         tabBarContainerView.bottomAnchor.constraint(equalTo: controller.view.bottomAnchor).isActive = true

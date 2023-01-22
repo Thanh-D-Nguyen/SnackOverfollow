@@ -9,11 +9,18 @@ import UIKit
 
 class MainTabbarController: UITabBarController {
     override var childForStatusBarStyle: UIViewController? {
-        self.navigationController
+        self.viewControllers?[self.selectedIndex]
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = .white
+        self.tabBar.barTintColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNeedsStatusBarAppearanceUpdate()
     }
 }

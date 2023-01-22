@@ -20,7 +20,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQ3-ZX-hR0">
                         <rect key="frame" x="0.0" y="0.0" width="179" height="109"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Oa4-3Y-Gax">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OrangeJuice" translatesAutoresizingMaskIntoConstraints="NO" id="Oa4-3Y-Gax">
                                 <rect key="frame" x="0.0" y="0.0" width="179" height="109"/>
                             </imageView>
                         </subviews>
@@ -45,4 +45,7 @@
             <point key="canvasLocation" x="205.34351145038167" y="39.7887323943662"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="OrangeJuice" width="2670" height="4000"/>
+    </resources>
 </document>

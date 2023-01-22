@@ -20,7 +20,7 @@ class BaseVC: UIViewController {
     let disposeBag = DisposeBag()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
-        .darkContent
+        Constants.currentBarStyle
     }
         
     override func viewDidLoad() {
@@ -30,6 +30,12 @@ class BaseVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.view.backgroundColor = .white
+        if self is HomeViewController {
+            Constants.currentBarStyle = .lightContent
+        } else {
+            Constants.currentBarStyle = .darkContent
+        }
         UIView.animate(withDuration: 0.3) {
             self.setNeedsStatusBarAppearanceUpdate()
         }

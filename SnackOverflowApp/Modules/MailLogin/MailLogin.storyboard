@@ -67,17 +67,21 @@
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="simit.donuts@gmail.com" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h2i-H0-Wgy">
                                                                 <rect key="frame" x="56" y="0.0" width="289" height="56"/>
+                                                                <color key="tintColor" name="gandalfColor"/>
                                                                 <color key="textColor" name="teflonColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" textContentType="username"/>
                                                             </textField>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNM-au-l7b">
+                                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNM-au-l7b">
                                                                 <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="wNM-au-l7b" secondAttribute="height" id="kje-ZA-gGW"/>
                                                                 </constraints>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" image="IconEmail"/>
+                                                                <connections>
+                                                                    <action selector="displayKeyboardAction:" destination="zIc-eW-6fX" eventType="touchUpInside" id="1oQ-w0-YQh"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,14 +109,18 @@
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dzz-gX-W2q">
                                                                 <rect key="frame" x="56" y="0.0" width="289" height="56"/>
+                                                                <color key="tintColor" name="gandalfColor"/>
                                                                 <color key="textColor" name="teflonColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
                                                             </textField>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZT-1V-7yo">
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZT-1V-7yo">
                                                                 <rect key="frame" x="0.0" y="0.0" width="56" height="56"/>
                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                 <state key="normal" image="IconPassword"/>
+                                                                <connections>
+                                                                    <action selector="displayKeyboardAction:" destination="zIc-eW-6fX" eventType="touchUpInside" id="dnM-PN-53W"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -234,7 +242,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="mailTextField" destination="h2i-H0-Wgy" id="yIa-9a-8ZW"/>
                         <outlet property="messageLabel" destination="yla-DV-1GC" id="bwX-W2-6nS"/>
+                        <outlet property="passTextField" destination="dzz-gX-W2q" id="hJV-L3-qZZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rle-ol-2Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>

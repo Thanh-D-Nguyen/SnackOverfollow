@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import UIKit
 
 class Constants {
-    static let baseURL = ""
+    static var currentBarStyle: UIStatusBarStyle = .darkContent
 }

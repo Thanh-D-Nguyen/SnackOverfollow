@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,15 +15,100 @@
             <objects>
                 <viewController storyboardIdentifier="MarketViewController" id="zIc-eW-6fX" customClass="MarketViewController" customModule="SnackOverflowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z2g-4m-atm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dc7-EA-dBf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="68"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pge-fm-bnN" customClass="RoundCornerView" customModule="SnackOverflowApp" customModuleProvider="target">
+                                        <rect key="frame" x="16" y="16" width="361" height="36"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9x-b1-PSe">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="e9x-b1-PSe" secondAttribute="height" multiplier="1:1" id="5jr-aL-58M"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="icSearch"/>
+                                            </button>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jhI-CX-Gex">
+                                                <rect key="frame" x="36" y="0.0" width="319" height="36"/>
+                                                <color key="tintColor" name="gandalfColor"/>
+                                                <color key="textColor" name="teflonColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="jhI-CX-Gex" secondAttribute="bottom" id="5GZ-fM-Rp3"/>
+                                            <constraint firstItem="jhI-CX-Gex" firstAttribute="leading" secondItem="e9x-b1-PSe" secondAttribute="trailing" id="B6m-iO-Wkd"/>
+                                            <constraint firstAttribute="bottom" secondItem="e9x-b1-PSe" secondAttribute="bottom" id="Rcl-25-6Ao"/>
+                                            <constraint firstItem="jhI-CX-Gex" firstAttribute="top" secondItem="pge-fm-bnN" secondAttribute="top" id="ct9-oc-1wV"/>
+                                            <constraint firstAttribute="trailing" secondItem="jhI-CX-Gex" secondAttribute="trailing" constant="6" id="m30-gl-fZV"/>
+                                            <constraint firstItem="e9x-b1-PSe" firstAttribute="top" secondItem="pge-fm-bnN" secondAttribute="top" id="ymX-8o-dXK"/>
+                                            <constraint firstItem="e9x-b1-PSe" firstAttribute="leading" secondItem="pge-fm-bnN" secondAttribute="leading" id="yqS-13-ojb"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radiusCorner">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" name="whiteyColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="pge-fm-bnN" secondAttribute="trailing" constant="16" id="Hj6-cf-DSz"/>
+                                    <constraint firstAttribute="height" constant="68" id="mdX-RM-ckx"/>
+                                    <constraint firstAttribute="bottom" secondItem="pge-fm-bnN" secondAttribute="bottom" constant="16" id="nFQ-aH-gNw"/>
+                                    <constraint firstItem="pge-fm-bnN" firstAttribute="top" secondItem="Dc7-EA-dBf" secondAttribute="top" constant="16" id="soO-Sh-DTw"/>
+                                    <constraint firstItem="pge-fm-bnN" firstAttribute="leading" secondItem="Dc7-EA-dBf" secondAttribute="leading" constant="16" id="yyD-c9-yVt"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WA7-MQ-O8H">
+                                <rect key="frame" x="0.0" y="127" width="393" height="691"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="3pi-N7-nbV"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dc7-EA-dBf" firstAttribute="leading" secondItem="3pi-N7-nbV" secondAttribute="leading" id="579-H0-JYf"/>
+                            <constraint firstItem="Dc7-EA-dBf" firstAttribute="top" secondItem="3pi-N7-nbV" secondAttribute="top" id="GgZ-Oz-PrY"/>
+                            <constraint firstItem="WA7-MQ-O8H" firstAttribute="leading" secondItem="3pi-N7-nbV" secondAttribute="leading" id="R3l-Pa-Obm"/>
+                            <constraint firstItem="WA7-MQ-O8H" firstAttribute="top" secondItem="Dc7-EA-dBf" secondAttribute="bottom" id="arU-TR-7I3"/>
+                            <constraint firstItem="3pi-N7-nbV" firstAttribute="trailing" secondItem="WA7-MQ-O8H" secondAttribute="trailing" id="b5f-vS-0dv"/>
+                            <constraint firstItem="3pi-N7-nbV" firstAttribute="trailing" secondItem="Dc7-EA-dBf" secondAttribute="trailing" id="syu-Z5-sBV"/>
+                            <constraint firstItem="3pi-N7-nbV" firstAttribute="bottom" secondItem="WA7-MQ-O8H" secondAttribute="bottom" id="vPc-Ci-wqZ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="marketTableView" destination="WA7-MQ-O8H" id="Wxe-3c-8Jd"/>
+                        <outlet property="searchTextField" destination="jhI-CX-Gex" id="B7q-bP-LR7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rle-ol-2Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="306" y="303"/>
+            <point key="canvasLocation" x="304.58015267175574" y="302.81690140845075"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icSearch" width="24" height="24"/>
+        <namedColor name="gandalfColor">
+            <color red="0.59215686274509804" green="0.56862745098039214" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="teflonColor">
+            <color red="0.33333333333333331" green="0.30196078431372547" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="whiteyColor">
+            <color red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -8,6 +8,8 @@
 import UIKit
 
 class HomeSubSectionCell: UITableViewCell {
+    
+    @IBOutlet weak private var titleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -16,8 +18,11 @@ class HomeSubSectionCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
+    }
+    
+    func updateTitle(_ section: HomeSectionType) {
+        titleLabel.text = section.titleText
     }
     
 }

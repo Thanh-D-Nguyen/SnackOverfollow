@@ -59,7 +59,8 @@ extension CarouselView: UICollectionViewDataSource {
             case .advanceSmall, .advanceLarge:
                 let cell: AdvanceCardCell = collectionView.dequeueResuableCell(forIndexPath: indexPath)
                 return cell
-            case .simpleSmall, .simpleLarge:
+            case .simpleSmall,
+                    .simpleLarge:
                 let cell: SimpleCardCell = collectionView.dequeueResuableCell(forIndexPath: indexPath)
                 return cell
             case .boxes:

@@ -15,7 +15,6 @@ final class MarketSearchWireframe: BaseWireframe<MarketSearchViewController> {
 
     private let storyboard = UIStoryboard(name: "MarketSearch", bundle: nil)
 
-
     init() {
         let moduleViewController = storyboard.instantiateViewController(ofType: MarketSearchViewController.self)
         super.init(viewController: moduleViewController)

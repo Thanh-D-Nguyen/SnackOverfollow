@@ -12,7 +12,7 @@ class WelcomeMainViewController: BaseViewController {
     
     var presenter: WelcomeMainPresenterInterface!
     @IBOutlet private weak var signInFBButton: UIButton!
-    private let fbButton = FBLoginButton()
+    private let facebookLoginButton = FBLoginButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +22,13 @@ class WelcomeMainViewController: BaseViewController {
     }
     
     func setupUI() {
-        view.addSubview(fbButton)
-        view.sendSubviewToBack(fbButton)
-        fbButton.translatesAutoresizingMaskIntoConstraints = false
-        signInFBButton.topAnchor.constraint(equalTo: fbButton.topAnchor).isActive = true
-        signInFBButton.leadingAnchor.constraint(equalTo: fbButton.leadingAnchor).isActive = true
-        signInFBButton.trailingAnchor.constraint(equalTo: fbButton.trailingAnchor).isActive = true
-        fbButton.delegate = self
+        view.addSubview(facebookLoginButton)
+        view.sendSubviewToBack(facebookLoginButton)
+        facebookLoginButton.translatesAutoresizingMaskIntoConstraints = false
+        signInFBButton.topAnchor.constraint(equalTo: facebookLoginButton.topAnchor).isActive = true
+        signInFBButton.leadingAnchor.constraint(equalTo: facebookLoginButton.leadingAnchor).isActive = true
+        signInFBButton.trailingAnchor.constraint(equalTo: facebookLoginButton.trailingAnchor).isActive = true
+        facebookLoginButton.delegate = self
     }
     
     func subscribe() {
@@ -38,7 +38,8 @@ class WelcomeMainViewController: BaseViewController {
     @IBAction
     private func signInAction(_ sender: UIButton) {
         if sender.tag == SignInType.facebook.rawValue {
-            fbButton.sendActions(for: .touchUpInside)
+            // 1. Login Facebook by open webview
+            facebookLoginButton.sendActions(for: .touchUpInside)
         } else {
             presenter.signInAction(sender.tag)
         }
@@ -47,6 +48,7 @@ class WelcomeMainViewController: BaseViewController {
 
 extension WelcomeMainViewController: LoginButtonDelegate {
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        // 2. Login Facebook using firebase
         presenter.signInAction(SignInType.facebook.rawValue)
     }
     

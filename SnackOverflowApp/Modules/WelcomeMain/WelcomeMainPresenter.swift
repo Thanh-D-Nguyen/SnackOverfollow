@@ -27,15 +27,16 @@ class WelcomeMainPresenter {
 
 extension WelcomeMainPresenter: WelcomeMainPresenterInterface {
     func viewDidLoad() {
-        socialSignInInteractor.didLoginComplete = { user, error in
-            print(user, error)
+        socialSignInInteractor.didLoginComplete = { [weak self] user, error in
+            guard let self else { return }
+            self.wireframe.showEmailLoginWithType(.register, userInfo: user)
         }
     }
     func signInAction(_ actionTag: Int) {
         guard let signInType = SignInType(rawValue: actionTag) else { return }
         switch signInType {
             case .signUpWithMail:
-                wireframe.showEmailLogin()
+                wireframe.showEmailLoginWithType(.login, userInfo: nil)
             case .apple:
                 socialSignInInteractor.signInWithApple()
             case .google:

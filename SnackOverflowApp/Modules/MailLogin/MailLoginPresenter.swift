@@ -9,18 +9,34 @@
 
 import Foundation
 import UIKit
+import RxRelay
+
+enum EmailLoginType {
+    case login
+    case register
+}
 
 protocol MailLoginPresenterInterface: AnyObject {
     var warningAttributedText: NSAttributedString { get }
     var mailPlaceHolderAttributedText: NSAttributedString { get }
     var passPlaceHolderAttributedText: NSAttributedString { get }
-
+    var titleText: String { get }
+    var loginButtonText: String { get }
+    
+    var userInfoRelay: PublishRelay<SocialUserEntity> { get }
+    
     func loginWithEmail()
+    func viewDidLoad()
 }
 
 class MailLoginPresenter {
     private let wireframe: MailLoginWireframeInterface
     private let interactor: MailLoginInteractorInterface
+    
+    let userInfoRelay = PublishRelay<SocialUserEntity>()
+    
+    private var loginType: EmailLoginType = .register
+    private var userInfo: SocialUserEntity?
     
     var warningAttributedText: NSAttributedString {
         let warningText = NSLocalizedString("By clicking \"Create account\", I agree to SnackOverflow’s TOS and Privacy Policy.", comment: "")
@@ -42,6 +58,18 @@ class MailLoginPresenter {
             attributes: [.foregroundColor: UIColor(named: "clooneyColor") ?? UIColor.white])
     }
     
+    var titleText: String {
+        return loginType == .register ?
+        NSLocalizedString("Go with your flow.", comment: "") :
+        NSLocalizedString("Welcome back!", comment: "")
+    }
+    
+    var loginButtonText: String {
+        return loginType == .register ?
+        NSLocalizedString("Create account", comment: "") :
+        NSLocalizedString("Login", comment: "")
+    }
+    
     init(
         interactor: MailLoginInteractorInterface,
         wireframe: MailLoginWireframeInterface
@@ -49,9 +77,19 @@ class MailLoginPresenter {
         self.interactor = interactor
         self.wireframe = wireframe
     }
+    
+    func setLoginType(_ type: EmailLoginType, userInfo: SocialUserEntity?) {
+        self.loginType = type
+        self.userInfo = userInfo
+    }
 }
 
 extension MailLoginPresenter: MailLoginPresenterInterface {
+    func viewDidLoad() {
+        if let userInfo = userInfo {
+            userInfoRelay.accept(userInfo)
+        }
+    }
     func loginWithEmail() {
         wireframe.showMain()
     }

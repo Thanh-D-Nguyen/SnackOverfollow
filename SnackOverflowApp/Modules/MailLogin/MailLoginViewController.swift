@@ -15,18 +15,23 @@ final class MailLoginViewController: BaseViewController {
     private let textFieldPassButtonTag = 2
 
     var presenter: MailLoginPresenterInterface!
-    
+    @IBOutlet weak private var titleTextLabel: UILabel!
     @IBOutlet weak private var messageLabel: UILabel!
     @IBOutlet weak private var mailTextField: UITextField!
     @IBOutlet weak private var passTextField: UITextField!
+    
+    @IBOutlet weak private var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         subscribe()
+        presenter.viewDidLoad()
     }
     
     func setupUI() {
+        titleTextLabel.text = presenter.titleText
+        loginButton.setTitle(presenter.loginButtonText, for: .normal)
         messageLabel.attributedText = presenter.warningAttributedText
         let tapGuesture = UITapGestureRecognizer()
         tapGuesture.addTarget(self, action: #selector(self.dismissKeyboard))
@@ -35,7 +40,12 @@ final class MailLoginViewController: BaseViewController {
         passTextField.attributedPlaceholder = presenter.passPlaceHolderAttributedText
     }
     
-    func subscribe() { }
+    func subscribe() {
+        subscribe(presenter.userInfoRelay, { [weak self] user in
+            guard let self else { return }
+            self.mailTextField.text = user.email
+        })
+    }
     
     @objc
     private func dismissKeyboard(_ gesture: UITapGestureRecognizer) {

@@ -17,6 +17,7 @@ enum SignInType: Int {
     case google
     case facebook
 }
+
 enum MainTabbarName: Int {
     case home
     case market

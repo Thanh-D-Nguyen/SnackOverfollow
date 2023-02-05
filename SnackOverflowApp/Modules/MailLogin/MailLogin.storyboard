@@ -242,9 +242,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginButton" destination="Trd-pR-IIa" id="rlF-1o-2v6"/>
                         <outlet property="mailTextField" destination="h2i-H0-Wgy" id="yIa-9a-8ZW"/>
                         <outlet property="messageLabel" destination="yla-DV-1GC" id="bwX-W2-6nS"/>
                         <outlet property="passTextField" destination="dzz-gX-W2q" id="hJV-L3-qZZ"/>
+                        <outlet property="titleTextLabel" destination="LQs-cp-rYP" id="dvI-eb-JNv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rle-ol-2Ax" userLabel="First Responder" sceneMemberID="firstResponder"/>

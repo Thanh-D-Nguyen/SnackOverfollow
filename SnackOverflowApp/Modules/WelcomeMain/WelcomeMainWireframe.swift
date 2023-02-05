@@ -8,7 +8,7 @@
 import UIKit
 
 protocol WelcomeMainWireframeInterface: AnyObject {
-    func showEmailLogin()
+    func showEmailLoginWithType(_ type: EmailLoginType, userInfo: SocialUserEntity?)
 }
 
 class WelcomeMainWireframe: BaseWireframe<WelcomeMainViewController> {
@@ -25,7 +25,7 @@ class WelcomeMainWireframe: BaseWireframe<WelcomeMainViewController> {
 }
 
 extension WelcomeMainWireframe: WelcomeMainWireframeInterface {
-    func showEmailLogin() {
-        navigationController?.setRootWireframe(MailLoginWireframe())
+    func showEmailLoginWithType(_ type: EmailLoginType, userInfo: SocialUserEntity?) {
+        navigationController?.setRootWireframe(MailLoginWireframe(type, userInfo: userInfo))
     }
 }

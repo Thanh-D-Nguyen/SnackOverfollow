@@ -14,7 +14,7 @@ import AuthenticationServices
 import CryptoKit
 
 protocol SocialSignInInteractorInterface: AnyObject {
-    var didLoginComplete: ((User?, Error?) -> Void)? { get set }
+    var didLoginComplete: ((SocialUserEntity?, Error?) -> Void)? { get set }
     
     func signInWithFacebook()
     func signInWithGoogle()
@@ -27,7 +27,7 @@ class SocialSignInInteractor: NSObject {
     
     private var currentNonce: String?
     
-    var didLoginComplete: ((User?, Error?) -> Void)?
+    var didLoginComplete: ((SocialUserEntity?, Error?) -> Void)?
     
     private func authWithCredential(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential) { [unowned self] result, error in
@@ -35,10 +35,7 @@ class SocialSignInInteractor: NSObject {
                 self.didLoginComplete?(nil, error)
                 return
             }
-            let user = result?.user
-            // Save user data
-            UserDefaults.standard.set(user, forKey: SocialSignInInteractor.userDataKey)
-            UserDefaults.standard.synchronize()
+            let user = SocialUserEntity(result?.user)
             self.didLoginComplete?(user, nil)
         }
     }

@@ -38,6 +38,7 @@
 		923D17C2298E19FB0069365B /* UIScrollView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D17BC298E19FB0069365B /* UIScrollView+PullToRefresh.swift */; };
 		923D17C3298E19FB0069365B /* RefreshViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D17BD298E19FB0069365B /* RefreshViewAnimator.swift */; };
 		923D17C6298F83170069365B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 923D17C5298F83170069365B /* GoogleSignIn */; };
+		923D17CA298FEE810069365B /* SocialUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D17C9298FEE810069365B /* SocialUserEntity.swift */; };
 		92440A9029704EB5002D23AC /* WelcomeMainWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440A8F29704EB5002D23AC /* WelcomeMainWireframe.swift */; };
 		92440A9229704ED5002D23AC /* WelcomeMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440A9129704ED5002D23AC /* WelcomeMainInteractor.swift */; };
 		92440A9429704EE6002D23AC /* WelcomeMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440A9329704EE6002D23AC /* WelcomeMainPresenter.swift */; };
@@ -194,6 +195,7 @@
 		923D17BD298E19FB0069365B /* RefreshViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshViewAnimator.swift; sourceTree = "<group>"; };
 		923D17C7298F9AA30069365B /* SnackOverflowAppStub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnackOverflowAppStub.entitlements; sourceTree = "<group>"; };
 		923D17C8298FA5F00069365B /* SnackOverflowApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnackOverflowApp.entitlements; sourceTree = "<group>"; };
+		923D17C9298FEE810069365B /* SocialUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialUserEntity.swift; sourceTree = "<group>"; };
 		92440A8F29704EB5002D23AC /* WelcomeMainWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMainWireframe.swift; sourceTree = "<group>"; };
 		92440A9129704ED5002D23AC /* WelcomeMainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMainInteractor.swift; sourceTree = "<group>"; };
 		92440A9329704EE6002D23AC /* WelcomeMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMainPresenter.swift; sourceTree = "<group>"; };
@@ -588,6 +590,7 @@
 			isa = PBXGroup;
 			children = (
 				92686416296BF88000E36FE8 /* WelcomeEntity.swift */,
+				923D17C9298FEE810069365B /* SocialUserEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -921,6 +924,7 @@
 				92440AEC29727999002D23AC /* CreateWireframe.swift in Sources */,
 				92686438296C04E000E36FE8 /* RoundCornerButton.swift in Sources */,
 				9268642E296BFF5300E36FE8 /* SlideShowInteractor.swift in Sources */,
+				923D17CA298FEE810069365B /* SocialUserEntity.swift in Sources */,
 				92163CCD296AB8F30014AE02 /* APIErrorFilter.swift in Sources */,
 				92440B182973DB21002D23AC /* CarouselView.swift in Sources */,
 				92163CD2296ABA800014AE02 /* Constants.swift in Sources */,

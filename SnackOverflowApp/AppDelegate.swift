@@ -15,8 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        AppService.bootstrap()
+        AppService.bootstrap(application)
         return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any]) -> Bool {
+        return AppService.handleOpenGoogleUrl(url)
     }
 
     // MARK: UISceneSession Lifecycle

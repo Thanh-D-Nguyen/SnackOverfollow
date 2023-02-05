@@ -31,6 +31,13 @@
 		9234C607296BEC59004EA956 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9234C606296BEC59004EA956 /* RxSwift */; };
 		9234C609296BEC59004EA956 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 9234C608296BEC59004EA956 /* RxTest */; };
 		9234C60C296BEC67004EA956 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 9234C60B296BEC67004EA956 /* Alamofire */; };
+		923D17BE298E19FB0069365B /* DefaultRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D17B8298E19FB0069365B /* DefaultRefreshView.swift */; };
+		923D17BF298E19FB0069365B /* PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D17B9298E19FB0069365B /* PullToRefresh.swift */; };
+		923D17C0298E19FB0069365B /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D17BA298E19FB0069365B /* State.swift */; };
+		923D17C1298E19FB0069365B /* DefaultViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D17BB298E19FB0069365B /* DefaultViewAnimator.swift */; };
+		923D17C2298E19FB0069365B /* UIScrollView+PullToRefresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D17BC298E19FB0069365B /* UIScrollView+PullToRefresh.swift */; };
+		923D17C3298E19FB0069365B /* RefreshViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923D17BD298E19FB0069365B /* RefreshViewAnimator.swift */; };
+		923D17C6298F83170069365B /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 923D17C5298F83170069365B /* GoogleSignIn */; };
 		92440A9029704EB5002D23AC /* WelcomeMainWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440A8F29704EB5002D23AC /* WelcomeMainWireframe.swift */; };
 		92440A9229704ED5002D23AC /* WelcomeMainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440A9129704ED5002D23AC /* WelcomeMainInteractor.swift */; };
 		92440A9429704EE6002D23AC /* WelcomeMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92440A9329704EE6002D23AC /* WelcomeMainPresenter.swift */; };
@@ -115,8 +122,6 @@
 		9268643C296C17AD00E36FE8 /* SlideItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268643B296C17AD00E36FE8 /* SlideItemViewController.swift */; };
 		9268643F2970383C00E36FE8 /* WelcomeMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9268643E2970383C00E36FE8 /* WelcomeMain.storyboard */; };
 		926864412970385900E36FE8 /* WelcomeMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926864402970385900E36FE8 /* WelcomeMainViewController.swift */; };
-		92686442297039CF00E36FE8 /* SVProgressHUD.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92686413296BF4CE00E36FE8 /* SVProgressHUD.xcframework */; };
-		92686443297039CF00E36FE8 /* SVProgressHUD.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92686413296BF4CE00E36FE8 /* SVProgressHUD.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9268644829703E4E00E36FE8 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268644729703E4E00E36FE8 /* BaseNavigationController.swift */; };
 		92720678296A9E3B0058876B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92720677296A9E3B0058876B /* AppDelegate.swift */; };
 		9272067A296A9E3B0058876B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92720679296A9E3B0058876B /* SceneDelegate.swift */; };
@@ -151,7 +156,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				92686443297039CF00E36FE8 /* SVProgressHUD.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,6 +186,14 @@
 		922985A1296BE9D700598511 /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		922985A4296BEA0F00598511 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		922985A6296BEA9700598511 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		923D17B8298E19FB0069365B /* DefaultRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultRefreshView.swift; sourceTree = "<group>"; };
+		923D17B9298E19FB0069365B /* PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefresh.swift; sourceTree = "<group>"; };
+		923D17BA298E19FB0069365B /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		923D17BB298E19FB0069365B /* DefaultViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultViewAnimator.swift; sourceTree = "<group>"; };
+		923D17BC298E19FB0069365B /* UIScrollView+PullToRefresh.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+PullToRefresh.swift"; sourceTree = "<group>"; };
+		923D17BD298E19FB0069365B /* RefreshViewAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshViewAnimator.swift; sourceTree = "<group>"; };
+		923D17C7298F9AA30069365B /* SnackOverflowAppStub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnackOverflowAppStub.entitlements; sourceTree = "<group>"; };
+		923D17C8298FA5F00069365B /* SnackOverflowApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SnackOverflowApp.entitlements; sourceTree = "<group>"; };
 		92440A8F29704EB5002D23AC /* WelcomeMainWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMainWireframe.swift; sourceTree = "<group>"; };
 		92440A9129704ED5002D23AC /* WelcomeMainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMainInteractor.swift; sourceTree = "<group>"; };
 		92440A9329704EE6002D23AC /* WelcomeMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeMainPresenter.swift; sourceTree = "<group>"; };
@@ -244,7 +256,6 @@
 		92440B2F297D4042002D23AC /* MarketSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSearchViewController.swift; sourceTree = "<group>"; };
 		92440B30297D4042002D23AC /* MarketSearchWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSearchWireframe.swift; sourceTree = "<group>"; };
 		92440B36297D40FA002D23AC /* MarketSearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketSearchInteractor.swift; sourceTree = "<group>"; };
-		92686413296BF4CE00E36FE8 /* SVProgressHUD.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = SVProgressHUD.xcframework; sourceTree = "<group>"; };
 		92686416296BF88000E36FE8 /* WelcomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeEntity.swift; sourceTree = "<group>"; };
 		92686418296BF8C500E36FE8 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		92686427296BFE5F00E36FE8 /* SlideShowWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideShowWireframe.swift; sourceTree = "<group>"; };
@@ -281,8 +292,8 @@
 				92440A9929705986002D23AC /* FirebaseAnalyticsSwift in Frameworks */,
 				9234C607296BEC59004EA956 /* RxSwift in Frameworks */,
 				92440AA129705986002D23AC /* FirebaseMessaging in Frameworks */,
+				923D17C6298F83170069365B /* GoogleSignIn in Frameworks */,
 				92440AAB29705C4C002D23AC /* FacebookShare in Frameworks */,
-				92686442297039CF00E36FE8 /* SVProgressHUD.xcframework in Frameworks */,
 				92440AA729705C4C002D23AC /* FacebookCore in Frameworks */,
 				9234C60C296BEC67004EA956 /* Alamofire in Frameworks */,
 				9234C605296BEC59004EA956 /* RxCocoa in Frameworks */,
@@ -416,6 +427,19 @@
 				922985A6296BEA9700598511 /* ViewInterface.swift */,
 			);
 			path = ViperBase;
+			sourceTree = "<group>";
+		};
+		923D17B7298E19FB0069365B /* PullToRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				923D17B8298E19FB0069365B /* DefaultRefreshView.swift */,
+				923D17B9298E19FB0069365B /* PullToRefresh.swift */,
+				923D17BA298E19FB0069365B /* State.swift */,
+				923D17BB298E19FB0069365B /* DefaultViewAnimator.swift */,
+				923D17BC298E19FB0069365B /* UIScrollView+PullToRefresh.swift */,
+				923D17BD298E19FB0069365B /* RefreshViewAnimator.swift */,
+			);
+			path = PullToRefresh;
 			sourceTree = "<group>";
 		};
 		92440AA229705A7C002D23AC /* Interactors */ = {
@@ -555,7 +579,7 @@
 		92686412296BF4BF00E36FE8 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				92686413296BF4CE00E36FE8 /* SVProgressHUD.xcframework */,
+				923D17B7298E19FB0069365B /* PullToRefresh */,
 			);
 			path = Vendors;
 			sourceTree = "<group>";
@@ -634,6 +658,8 @@
 		92720676296A9E3B0058876B /* SnackOverflowApp */ = {
 			isa = PBXGroup;
 			children = (
+				923D17C8298FA5F00069365B /* SnackOverflowApp.entitlements */,
+				923D17C7298F9AA30069365B /* SnackOverflowAppStub.entitlements */,
 				92440AA229705A7C002D23AC /* Interactors */,
 				92440A952970586D002D23AC /* GoogleService-Info.plist */,
 				92686431296C013200E36FE8 /* Resources */,
@@ -701,6 +727,7 @@
 				92440AA629705C4C002D23AC /* FacebookCore */,
 				92440AA829705C4C002D23AC /* FacebookLogin */,
 				92440AAA29705C4C002D23AC /* FacebookShare */,
+				923D17C5298F83170069365B /* GoogleSignIn */,
 			);
 			productName = SnackOverflowApp;
 			productReference = 92720674296A9E3B0058876B /* SnackOverflowApp.app */;
@@ -782,6 +809,7 @@
 				9234C60A296BEC67004EA956 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				92440A9729705986002D23AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				92440AA529705C4C002D23AC /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				923D17C4298F83170069365B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
 			productRefGroup = 92720675296A9E3B0058876B /* Products */;
 			projectDirPath = "";
@@ -869,10 +897,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				92440AEB29727999002D23AC /* CreateViewController.swift in Sources */,
+				923D17C2298E19FB0069365B /* UIScrollView+PullToRefresh.swift in Sources */,
 				9229859A296BE4FB00598511 /* StartUpInteractor.swift in Sources */,
 				92440B0C2973D3A5002D23AC /* HomeCardCell.swift in Sources */,
 				92163CC0296AB3580014AE02 /* BaseViewControler.swift in Sources */,
 				92163CC7296AB7160014AE02 /* RealmService.swift in Sources */,
+				923D17C0298E19FB0069365B /* State.swift in Sources */,
 				92440AD62972783A002D23AC /* HomeInteractor.swift in Sources */,
 				92440AF829727A8E002D23AC /* AccountPresenter.swift in Sources */,
 				92686430296BFF8000E36FE8 /* SlideShowPresenter.swift in Sources */,
@@ -881,6 +911,7 @@
 				92440AEE297279F5002D23AC /* CreateInteractor.swift in Sources */,
 				92720678296A9E3B0058876B /* AppDelegate.swift in Sources */,
 				92440B1C2973DC04002D23AC /* View.swift in Sources */,
+				923D17BF298E19FB0069365B /* PullToRefresh.swift in Sources */,
 				92163CE2296BDF810014AE02 /* EvironmentConfig.swift in Sources */,
 				926864412970385900E36FE8 /* WelcomeMainViewController.swift in Sources */,
 				92440AB529726378002D23AC /* MailLoginWireframe.swift in Sources */,
@@ -925,9 +956,11 @@
 				92440AB829726424002D23AC /* MailLoginInteractor.swift in Sources */,
 				9268642C296BFED300E36FE8 /* SlideShowViewController.swift in Sources */,
 				92440AA429705A9A002D23AC /* SocialSignInInteractor.swift in Sources */,
+				923D17BE298E19FB0069365B /* DefaultRefreshView.swift in Sources */,
 				92440B2A297D0FCD002D23AC /* CollectionView.swift in Sources */,
 				92440AEA29727999002D23AC /* CreatePresenter.swift in Sources */,
 				92440ADF297278DA002D23AC /* MarketViewController.swift in Sources */,
+				923D17C1298E19FB0069365B /* DefaultViewAnimator.swift in Sources */,
 				92298598296BE4FB00598511 /* StartUpViewController.swift in Sources */,
 				92440A9029704EB5002D23AC /* WelcomeMainWireframe.swift in Sources */,
 				92686436296C040900E36FE8 /* RoundCornerView.swift in Sources */,
@@ -936,6 +969,7 @@
 				922985A5296BEA0F00598511 /* BaseWireframe.swift in Sources */,
 				92686417296BF88000E36FE8 /* WelcomeEntity.swift in Sources */,
 				92440AD4297277DC002D23AC /* HomeWireframe.swift in Sources */,
+				923D17C3298E19FB0069365B /* RefreshViewAnimator.swift in Sources */,
 				92440B1F2973DE72002D23AC /* AdvanceCardCell.swift in Sources */,
 				9268644829703E4E00E36FE8 /* BaseNavigationController.swift in Sources */,
 				92440B37297D40FA002D23AC /* MarketSearchInteractor.swift in Sources */,
@@ -1059,12 +1093,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SnackOverflowApp/SnackOverflowAppStub.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = VFGNZ488T7;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SnackOverflowApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_DISPLAY_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = " STUB";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1077,6 +1113,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1187,12 +1224,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SnackOverflowApp/SnackOverflowApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VFGNZ488T7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SnackOverflowApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_DISPLAY_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = " STUB";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1369,12 +1407,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SnackOverflowApp/SnackOverflowApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VFGNZ488T7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SnackOverflowApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_DISPLAY_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = " STUB";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1399,12 +1438,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "$(APP_ICON)";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SnackOverflowApp/SnackOverflowApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VFGNZ488T7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SnackOverflowApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(PRODUCT_DISPLAY_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = " STUB";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1565,6 +1605,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		923D17C4298F83170069365B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		92440A9729705986002D23AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -1608,6 +1656,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9234C60A296BEC67004EA956 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		923D17C5298F83170069365B /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923D17C4298F83170069365B /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
 		};
 		92440A9829705986002D23AC /* FirebaseAnalyticsSwift */ = {
 			isa = XCSwiftPackageProductDependency;

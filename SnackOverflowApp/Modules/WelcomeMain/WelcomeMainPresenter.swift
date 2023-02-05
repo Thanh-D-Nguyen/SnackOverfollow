@@ -13,12 +13,14 @@ protocol WelcomeMainPresenterInterface: AnyObject {
 
 class WelcomeMainPresenter {
     private let interactor: WelcomeMainInteractorInterface
+    private let socialSignInInteractor: SocialSignInInteractorInterface
     private let wireframe: WelcomeMainWireframeInterface
     
     init(interactor: WelcomeMainInteractorInterface,
          wireframe: WelcomeMainWireframeInterface) {
         self.interactor = interactor
         self.wireframe = wireframe
+        self.socialSignInInteractor = SocialSignInInteractor()
     }
 }
 
@@ -29,11 +31,11 @@ extension WelcomeMainPresenter: WelcomeMainPresenterInterface {
             case .signUpWithMail:
                 wireframe.showEmailLogin()
             case .apple:
-                break
+                socialSignInInteractor.signInWithApple()
             case .google:
-                break
+                socialSignInInteractor.signInWithGoogle()
             case .facebook:
-                break
+                socialSignInInteractor.signInWithFacebook()
         }
     }
 }

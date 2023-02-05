@@ -49,9 +49,6 @@
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E4h-ox-t8K" customClass="RoundCornerButton" customModule="SnackOverflowApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="361" height="58"/>
                                                         <color key="backgroundColor" name="deepSkyBlueColor"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="58" id="Ivh-xa-qch"/>
-                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                         <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -77,6 +74,9 @@
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRi-0s-Rtp" customClass="RoundCornerButton" customModule="SnackOverflowApp" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="74" width="361" height="58"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="58" id="WA1-d0-cFZ"/>
+                                                        </constraints>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                         <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -214,12 +214,26 @@
                             <constraint firstItem="71q-9o-un0" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="njU-RD-c9c"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="signInFBButton" destination="E4h-ox-t8K" id="Pdh-TS-k9E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="64.885496183206101" y="-2.1126760563380285"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="8iU-Lz-jL6">
+            <size key="intrinsicContentSize" width="208" height="24"/>
+        </designable>
+        <designable name="M3A-B8-JM3">
+            <size key="intrinsicContentSize" width="172" height="36"/>
+        </designable>
+        <designable name="SRi-0s-Rtp">
+            <size key="intrinsicContentSize" width="220" height="24"/>
+        </designable>
+    </designables>
     <resources>
         <image name="App logo" width="143" height="125"/>
         <image name="Apple Logo" width="24" height="24"/>
@@ -230,7 +244,7 @@
             <color red="0.0" green="0.0" blue="0.0" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="blackA54Color">
-            <color red="0.0" green="0.0" blue="0.0" alpha="0.54000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.54000002145767212" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="deepSkyBlueColor">
             <color red="0.094117647058823528" green="0.46666666666666667" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -242,7 +256,7 @@
             <color red="0.33333333333333331" green="0.30196078431372547" blue="0.33725490196078434" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="whiteA30Color">
-            <color red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="0.30000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

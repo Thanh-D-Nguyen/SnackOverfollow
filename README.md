@@ -1,5 +1,11 @@
 # SnackOverfollow
 
+Sample project of [Zeplin](https://app.zeplin.io)
+
+Please Login to view project, and start develop.
+
+----------------------
+
 Dear friends and supporters,
 
 I am excited to share my latest personal project with you on GitHub. This project has been a passion of mine and I believe it has the potential to make a difference.

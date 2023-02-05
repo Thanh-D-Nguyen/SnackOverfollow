@@ -23,51 +23,11 @@ protocol SocialSignInInteractorInterface: AnyObject {
 
 class SocialSignInInteractor: NSObject {
     
+    static let userDataKey = "SocialUserDataKey"
+    
     private var currentNonce: String?
     
     var didLoginComplete: ((User?, Error?) -> Void)?
-
-    private func randomNonceString(length: Int = 32) -> String {
-        precondition(length > 0)
-        let charset: [Character] = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
-        var result = ""
-        var remainingLength = length
-        while remainingLength > 0 {
-            let randoms: [UInt8] = (0 ..< 16).map { _ in
-                var random: UInt8 = 0
-                let errorCode = SecRandomCopyBytes(kSecRandomDefault, 1, &random)
-                if errorCode != errSecSuccess {
-                    fatalError(
-                        "Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)"
-                    )
-                }
-                return random
-            }
-            
-            randoms.forEach { random in
-                if remainingLength == 0 {
-                    return
-                }
-                
-                if random < charset.count {
-                    result.append(charset[Int(random)])
-                    remainingLength -= 1
-                }
-            }
-        }
-        
-        return result
-    }
-    
-    private func sha256(_ input: String) -> String {
-        let inputData = Data(input.utf8)
-        let hashedData = SHA256.hash(data: inputData)
-        let hashString = hashedData.compactMap {
-            String(format: "%02x", $0)
-        }.joined()
-        
-        return hashString
-    }
     
     private func authWithCredential(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential) { [unowned self] result, error in
@@ -76,6 +36,9 @@ class SocialSignInInteractor: NSObject {
                 return
             }
             let user = result?.user
+            // Save user data
+            UserDefaults.standard.set(user, forKey: SocialSignInInteractor.userDataKey)
+            UserDefaults.standard.synchronize()
             self.didLoginComplete?(user, nil)
         }
     }
@@ -85,8 +48,7 @@ class SocialSignInInteractor: NSObject {
 extension SocialSignInInteractor: SocialSignInInteractorInterface {
     func signInWithFacebook() {
         guard let tokenString = AccessToken.current?.tokenString else { return }
-        let credential = FacebookAuthProvider
-            .credential(withAccessToken: tokenString)
+        let credential = FacebookAuthProvider.credential(withAccessToken: tokenString)
         self.authWithCredential(credential)
     }
     
@@ -142,7 +104,6 @@ extension SocialSignInInteractor: ASAuthorizationControllerDelegate {
                 let credential = OAuthProvider.credential(withProviderID: "apple.com",
                                                           idToken: idTokenString,
                                                           rawNonce: nonce)
-               
                 authWithCredential(credential)
             default: break
         }
@@ -153,9 +114,42 @@ extension SocialSignInInteractor: ASAuthorizationControllerDelegate {
 }
 
 extension SocialSignInInteractor: ASAuthorizationControllerPresentationContextProviding {
-    /// - Tag: provide_presentation_anchor
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene
-        return scene?.windows.first(where: { $0.isKeyWindow }) ?? UIWindow()
+        return scene?.windows.first(where: { $0.isKeyWindow }) ?? UIApplication.shared.delegate!.window!!
+    }
+}
+/// Support Login security
+extension SocialSignInInteractor {
+    private func randomNonceString(length: Int = 32) -> String {
+        precondition(length > 0)
+        let charset: [Character] = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
+        var result = ""
+        var remainingLength = length
+        while remainingLength > 0 {
+            let randoms: [UInt8] = (0 ..< 16).map { _ in
+                var random: UInt8 = 0
+                let errorCode = SecRandomCopyBytes(kSecRandomDefault, 1, &random)
+                if errorCode != errSecSuccess {
+                    fatalError("Unable to generate nonce. SecRandomCopyBytes failed with OSStatus \(errorCode)")
+                }
+                return random
+            }
+            randoms.forEach { random in
+                if remainingLength == 0 { return }
+                if random < charset.count {
+                    result.append(charset[Int(random)])
+                    remainingLength -= 1
+                }
+            }
+        }
+        return result
+    }
+    
+    private func sha256(_ input: String) -> String {
+        let inputData = Data(input.utf8)
+        let hashedData = SHA256.hash(data: inputData)
+        let hashString = hashedData.compactMap { String(format: "%02x", $0) }.joined()
+        return hashString
     }
 }

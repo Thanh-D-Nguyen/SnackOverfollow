@@ -8,6 +8,7 @@
 import Foundation
 
 protocol WelcomeMainPresenterInterface: AnyObject {
+    func viewDidLoad()
     func signInAction(_ actionTag: Int)
 }
 
@@ -25,6 +26,11 @@ class WelcomeMainPresenter {
 }
 
 extension WelcomeMainPresenter: WelcomeMainPresenterInterface {
+    func viewDidLoad() {
+        socialSignInInteractor.didLoginComplete = { user, error in
+            print(user, error)
+        }
+    }
     func signInAction(_ actionTag: Int) {
         guard let signInType = SignInType(rawValue: actionTag) else { return }
         switch signInType {

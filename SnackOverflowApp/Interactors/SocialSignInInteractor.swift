@@ -14,6 +14,8 @@ import AuthenticationServices
 import CryptoKit
 
 protocol SocialSignInInteractorInterface: AnyObject {
+    var didLoginComplete: ((User?, Error?) -> Void)? { get set }
+    
     func signInWithFacebook()
     func signInWithGoogle()
     func signInWithApple()
@@ -23,6 +25,8 @@ class SocialSignInInteractor: NSObject {
     
     private var currentNonce: String?
     
+    var didLoginComplete: ((User?, Error?) -> Void)?
+
     private func randomNonceString(length: Int = 32) -> String {
         precondition(length > 0)
         let charset: [Character] = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
@@ -66,13 +70,13 @@ class SocialSignInInteractor: NSObject {
     }
     
     private func authWithCredential(_ credential: AuthCredential) {
-        Auth.auth().signIn(with: credential) { result, error in
+        Auth.auth().signIn(with: credential) { [unowned self] result, error in
             if let error = error {
-                print(error)
+                self.didLoginComplete?(nil, error)
                 return
             }
             let user = result?.user
-            print(user?.displayName, user?.email, user?.metadata, user?.phoneNumber, user?.photoURL, user?.refreshToken)
+            self.didLoginComplete?(user, nil)
         }
     }
 
@@ -93,7 +97,7 @@ extension SocialSignInInteractor: SocialSignInInteractorInterface {
         GIDSignIn.sharedInstance.configuration = config
         GIDSignIn.sharedInstance.signIn(withPresenting: mainView) { [unowned self] result, error in
             if let error = error {
-                print(error)
+                self.didLoginComplete?(nil, error)
                 return
             }
             guard let idToken = result?.user.idToken?.tokenString,
@@ -125,11 +129,13 @@ extension SocialSignInInteractor: ASAuthorizationControllerDelegate {
                     fatalError("Invalid state: A login callback was received, but no login request was sent.")
                 }
                 guard let appleIDToken = appleIDCredential.identityToken else {
-                    print("Unable to fetch identity token")
+                    let error = NSError(domain: "Unable to fetch identity token", code: -1)
+                    self.didLoginComplete?(nil, error)
                     return
                 }
                 guard let idTokenString = String(data: appleIDToken, encoding: .utf8) else {
-                    print("Unable to serialize token string from data: \(appleIDToken.debugDescription)")
+                    let error = NSError(domain: "Unable to serialize token string from data: \(appleIDToken.debugDescription)", code: -1)
+                    self.didLoginComplete?(nil, error)
                     return
                 }
                 // Initialize a Firebase credential.
@@ -142,7 +148,7 @@ extension SocialSignInInteractor: ASAuthorizationControllerDelegate {
         }
     }
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("error", error)
+        self.didLoginComplete?(nil, error)
     }
 }
 

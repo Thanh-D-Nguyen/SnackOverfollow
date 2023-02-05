@@ -19,6 +19,7 @@ class WelcomeMainViewController: BaseViewController {
         // Do any additional setup after loading the view.
         setupUI()
         subscribe()
+        presenter.viewDidLoad()
     }
     
     func setupUI() {
